@@ -1,0 +1,172 @@
+/*======== GOOGLE FONTS ========*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*======== VARIABLES ========*/
+:root {
+    --p-fontsize: 16px;
+
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    /* Primary */
+
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+
+    --verypale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* Wights */
+    --semiBold: 500;
+    --bold: 700;
+    --bolder: 900;
+}
+
+/*======== BASE ========*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+}
+
+/*======== MAIN CLASSES ========*/
+.container {
+    width: var(--mobile);
+    margin: 8rem auto;
+}
+
+.card {
+    width: var(--mobile);
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 180px;
+    background-image: url(images/illustration-hero.svg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    row-gap: 1rem;
+}
+
+.card-title {
+    font-weight: var(--bolder);
+}
+
+.card-description {
+    font-weight: var(--semiBold);
+    text-align: center;
+    padding-inline: 2rem;
+    padding-bottom: 10px;
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    width: 100%;
+    background-color: var(--verypale-blue);
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-plan-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.plan-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-title {
+    font-weight: var(--bolder);
+}
+
+.plan-price {
+    color: var(--desaturated-blue);
+}
+
+.change-plan-link {
+    font-weight: var(--bold);
+    color: var(--bright-blue);
+    transition: .4s;
+}
+
+.change-plan-link:hover {
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.575);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.proceed-btn {
+    background-color: var(--bright-blue);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: var(--bold);
+    cursor: pointer;
+    box-shadow: 0 7px 20px hsla(245, 75%, 52%, 0.466);
+    transition: .4s;
+}
+
+.proceed-btn:hover {
+    background-color: hsla(245, 75%, 52%, 0.575);
+}
+
+.cancel-btn {
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    font-weight: var(--bold);
+    color: var(--desaturated-blue);
+    cursor: pointer;
+    transition: .4s;
+}
+
+.cancel-btn:hover {
+    color: var(--dark-blue);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
